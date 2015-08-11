@@ -1,9 +1,15 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package practica1edd_201314631;
+
+import java.io.*;
+import java.io.FileWriter;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -16,6 +22,26 @@ public class CargaObjetos extends javax.swing.JFrame {
      */
     public CargaObjetos() {
         initComponents();
+        this.jLabel1.setIcon(new ImageIcon("C:/Users/Dell/Documents/NetBeansProjects/compi1/Practica1EDD_201314631/Entrada.jpg"));
+        this.jComboBox1.addItem("Entrada");
+        this.jComboBox1.addItem("Mario");
+        this.jComboBox1.addItem("Castillo");
+        this.jComboBox1.addItem("Suelo");
+        this.jComboBox1.addItem("Pared");
+        this.jComboBox1.addItem("Goomba");
+        this.jComboBox1.addItem("Koopa");
+        this.jComboBox1.addItem("Hongo");
+        this.jComboBox1.addItem("Ficha");
+        
+    /*
+        ListaDE prueba = new ListaDE();
+        prueba.agregar("Hola", 1,  1);
+        prueba.agregar("Mundo", 1,  1);
+        prueba.agregar("Esta", 1,  1);
+        prueba.agregar("Es", 1,  1);
+        prueba.agregar("Prueba", 1,  1);
+        prueba.imprimir();
+      */  
     }
 
     /**
@@ -27,21 +53,447 @@ public class CargaObjetos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox();
+        jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jButton3 = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jButton4 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jComboBox1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox1ItemStateChanged(evt);
+            }
+        });
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setText("Seleccione lo que desea");
+
+        jButton1.setText("Agregar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+
+        jLabel4.setText("Ingrese Nombre");
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setText("Ingrese Cantidad");
+
+        jLabel6.setText("Tipo");
+
+        jTextField3.setEnabled(false);
+
+        jButton2.setText("Mostrar Datos");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setText("Escriba el nombre que desea");
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel8.setText("Modificar");
+
+        jLabel9.setText("Agregar Nuevo");
+
+        jLabel11.setText("Nuevo Nombre");
+
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
+
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("Buscar y Actualizar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel12.setText("Eliminar");
+
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("Escriba Nombre");
+
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField6ActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("Eliminar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel5))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jComboBox1, 0, 103, Short.MAX_VALUE)
+                                    .addComponent(jTextField1)
+                                    .addComponent(jTextField2)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(jLabel6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jButton1)
+                                    .addComponent(jTextField3)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(122, 122, 122)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton2))))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel11)
+                                        .addGap(114, 114, 114)
+                                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel7)
+                                        .addGap(48, 48, 48)
+                                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(44, 44, 44)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
+                                            .addComponent(jTextField6)))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(141, 141, 141)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel8)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(4, 4, 4)
+                                        .addComponent(jLabel12))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton3))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(jLabel9)))
+                .addContainerGap(135, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel9)
+                .addGap(1, 1, 1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(54, 54, 54)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(33, 33, 33)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(22, 22, 22)
+                        .addComponent(jButton1)
+                        .addGap(21, 21, 21)
+                        .addComponent(jButton2)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel8)
+                                .addGap(53, 53, 53)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel11)
+                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(27, 27, 27)
+                                .addComponent(jButton3)
+                                .addGap(37, 37, 37)
+                                .addComponent(jLabel12)
+                                .addGap(27, 27, 27)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(33, 33, 33)
+                                .addComponent(jButton4))
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(116, Short.MAX_VALUE))))
         );
+
+        jLabel1.getAccessibleContext().setAccessibleName("Foto1");
+        jComboBox1.getAccessibleContext().setAccessibleName("ComboBox1");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+       
+    
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox1ItemStateChanged
+    
+        int selectedIndex = jComboBox1.getSelectedIndex();
+        switch (selectedIndex) {
+            case 1: jTextField3.setText("1");jTextField2.setText("1");this.jLabel1.setIcon(new ImageIcon("C:/Users/Dell/Documents/NetBeansProjects/compi1/Practica1EDD_201314631/Mario.png"));break;
+            case 2: jTextField3.setText("2");jTextField2.setText("1");this.jLabel1.setIcon(new ImageIcon("C:/Users/Dell/Documents/NetBeansProjects/compi1/Practica1EDD_201314631/Castillo.jpg"));break;
+            case 3: jTextField3.setText("3");this.jLabel1.setIcon(new ImageIcon("C:/Users/Dell/Documents/NetBeansProjects/compi1/Practica1EDD_201314631/Suelo.png"));break;
+            case 4: jTextField3.setText("4");this.jLabel1.setIcon(new ImageIcon("C:/Users/Dell/Documents/NetBeansProjects/compi1/Practica1EDD_201314631/Pared.png"));break;
+            case 5: jTextField3.setText("5");this.jLabel1.setIcon(new ImageIcon("C:/Users/Dell/Documents/NetBeansProjects/compi1/Practica1EDD_201314631/Goomba.png"));break;
+            case 6: jTextField3.setText("6");this.jLabel1.setIcon(new ImageIcon("C:/Users/Dell/Documents/NetBeansProjects/compi1/Practica1EDD_201314631/Koopa.png"));break;
+            case 7: jTextField3.setText("7");this.jLabel1.setIcon(new ImageIcon("C:/Users/Dell/Documents/NetBeansProjects/compi1/Practica1EDD_201314631/Hongo.png"));break;
+            case 8: jTextField3.setText("8");this.jLabel1.setIcon(new ImageIcon("C:/Users/Dell/Documents/NetBeansProjects/compi1/Practica1EDD_201314631/Ficha.png"));break;        
+        }
+        
+
+    }//GEN-LAST:event_jComboBox1ItemStateChanged
+ ListaDE nueva = new ListaDE();
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        int cantidad = Integer.parseInt(jTextField2.getText());
+        int tipo = Integer.parseInt(jTextField3.getText());
+       int i=0;
+        for(i=0;i<cantidad;i++){
+        nueva.agregar(jTextField1.getText(),tipo,cantidad);
+       }
+        jTextField1.setText("");
+  
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+private File texto;
+     public void archivoGraphviz(String escribir, String nombre) {
+        try {
+            String path = "Lista.txt";
+            texto = new File(path);
+            FileWriter writer = new FileWriter(texto);
+            BufferedWriter buf = new BufferedWriter(writer);
+            buf.write(
+                    escribir
+                    
+            );
+            buf.flush();
+            buf.close();
+            writer.close();
+            generar(nombre);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+    public void graficaLista(){
+        String texto = "";
+        texto += "digraph grafica{\n";
+        texto += "rankdir = TB; \n";
+        texto += "node [shape = record, style = filled, colorfill = white]; \n";
+        texto += "splines = line;\n";
+        /*----------SUB GRAPH---------*/
+        texto += "subgraph cluster_L {\n";
+        texto += "node [shape = box style = filled];\n";
+        texto += "label = \"Lista de Personajes \"; \n";
+        texto += "color = black\n";
+        NodoDE aux = nueva.inicio;
+        
+        if(aux != null){
+            if(aux.siguiente == null){
+                texto += "G" + aux.nombre + "[label=\"Tipo:" + aux.tipo  + "\n Cantidad: " + aux.cantidad+ "\n nombre: "+aux.nombre+"\"" + "]\n";
+            }else{
+                while(aux.siguiente != null){
+                    NodoDE aux1 = aux;
+                    NodoDE aux2 = aux.siguiente;
+                    texto += "G" + aux1.nombre + "[label = \"Tipo:" + aux1.tipo + "\n Cantidad: " + aux.cantidad + "\n nombre: "+aux.nombre+"\"" + "]\n";
+                    texto += "G" + aux2.nombre + "[label = \"Tipo:" + aux2.tipo + "\n Cantidad: " + aux.cantidad  + "\n nombre: "+aux.nombre+"\"" + "]\n";
+                    texto += "G" + aux1.nombre + "->G" + aux2.nombre+ ";\n";
+                    texto += "G" + aux2.nombre + "->G" + aux1.nombre + ";\n";
+                    aux = aux.siguiente;
+                }
+            }
+        }
+        texto += "}\n";
+        /*--------------------------------------------------------------------------------------------------*/
+        texto += "}";
+        archivoGraphviz(texto, "Lista");
+    }
+    public void generar(String nombre) {
+        try{
+            String dotPath = "C:\\Program Files (x86)\\Graphviz2.38\\bin\\dot.exe";
+            String fileInputPath =  nombre +".txt";
+            String fileOutputPath =  nombre +".jpg";
+            String tParam = "-Tjpg";
+            String tOParam = "-o";
+            String [] cmd = new String[5];
+            cmd[0] = dotPath;
+            cmd[1] = tParam;
+            cmd[2] = fileInputPath;
+            cmd[3] = tOParam;
+            cmd[4] = fileOutputPath;
+            Runtime rt = Runtime.getRuntime();
+            rt.exec(cmd);
+        }catch(Exception e){
+
+        }
+    }
+    
+    
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        
+        nueva.imprimir();
+       graficaLista();
+        
+        /* String ruta = "C:\\Users\\Dell\\Desktop\\Lista.txt";
+        File f;
+	    FileWriter escribir;
+	    try{
+	    System.out.println(ruta);
+	    f = new File(ruta);
+	    escribir = new FileWriter(f);
+	    BufferedWriter bw = new BufferedWriter(escribir);
+	    PrintWriter pw = new PrintWriter(bw);
+            pw.write("Lista Doblemente Enlazada { \n");
+            pw.write("label= \"LISTA DOBLE  PERSONAJES\"");
+            pw.write("node [shape=record];\n");
+	    pw.write("subgraph g { \n "); 
+            if(nueva.inicio!=null){
+                
+                    ListaDE aux = nueva;
+                    if(aux.inicio.siguiente!=null){
+                        while(aux.inicio.siguiente!=null){
+                            pw.write("node"+aux.inicio.nombre+"[label=\" Cantidad: "+aux.inicio.cantidad+" Tipo: "+aux.inicio.tipo + "\"];\n");
+                            pw.write("node"+aux.inicio.siguiente.nombre+"[label=\" Cantidad: "+aux.inicio.siguiente.cantidad+" Tipo: "+aux.inicio.siguiente.tipo+" \"];\n");
+                            pw.write("node"+aux.inicio.siguiente.nombre+"->node"+aux.inicio.siguiente.nombre+";\n");
+                            pw.write("node"+aux.inicio.siguiente.nombre+"->node"+aux.inicio.siguiente.nombre+";\n");
+                            aux.inicio = aux.inicio.siguiente;
+                        }
+                    }
+                    else{
+                        pw.write("node"+aux.inicio.siguiente.nombre+"[label=\" Cantidad: "+aux.inicio.siguiente.cantidad+" Tipo: "+aux.inicio.siguiente.tipo+" \"];\n");     
+                    }
+                
+            }
+            else{
+                    System.out.println(" ---------------Lista Vacia----------------------- ");
+            }
+            pw.write("}\n");
+	    pw.write("}\n");
+	    pw.close();
+	    bw.close();
+	    }
+	    catch(IOException e){System.out.println("Error: "+e.getMessage());
+            
+            }
+
+        try{
+            String dotPath = "C:\\Program Files (x86)\\Graphviz2.38\\bin\\dot.exe";
+            String fileInputPath = "C:\\Users\\Dell\\Desktop\\Lista.txt";
+            String fileOutputPath = "C:\\Users\\Dell\\Desktop\\Lista.jpg";
+            String tParam = "-Tjpg";
+            String tOParam = "-o";
+            String [] cmd = new String[5];
+            cmd[0] = dotPath;
+            cmd[1] = tParam;
+            cmd[2] = fileInputPath;
+            cmd[3] = tOParam;
+            cmd[4] = fileOutputPath;
+            Runtime rt = Runtime.getRuntime();
+            rt.exec(cmd);
+        }catch(Exception e){
+
+        }*/
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+             // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        nueva.buscar(jTextField5.getText(),jTextField4.getText());           // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        nueva.eliminar(jTextField6.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +531,28 @@ public class CargaObjetos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
 }
