@@ -15,7 +15,11 @@ public class Practica1EDD_201314631 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+            Tablero f = new Tablero(); 
+f.setVisible (true); 
+
+
+// TODO code application logic here
     }
     
 }
